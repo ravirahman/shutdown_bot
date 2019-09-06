@@ -18,7 +18,6 @@ def main():
     last_success_time = datetime.now()
     while True:
         poll_result = subprocess.run(["ps", "ax"], stderr=subprocess.PIPE, stdout=subprocess.PIPE, check=True, universal_newlines=True)
-        poll_result.check_returncode()
         lines: Iterable[str] = poll_result.stdout.split("\n")
         found_active_ssh = False
         for line in lines:
