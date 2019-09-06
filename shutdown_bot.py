@@ -21,7 +21,7 @@ def main():
         lines: Iterable[str] = poll_result.stdout.split("\n")
         found_active_ssh = False
         for line in lines:
-            if "sshd" in line:
+            if " sshd: " in line:
                 last_success_time = datetime.now()
                 found_active_ssh = True
                 break
