@@ -1,0 +1,11 @@
+[Unit]
+Description=Shutdown Bot
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/bin/shutdown_bot
+
+[Install]
+WantedBy=multi-user.target
